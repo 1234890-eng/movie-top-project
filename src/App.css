@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-bottom: 20px;
+}
+
+.header-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between; /* Distribute space between elements */
+  align-items: center; /* Align items in the center vertically */
+  gap: 20px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.category-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.category-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-nav a:hover {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.category-nav a.active {
+  border-bottom: 2px solid white;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar {
+  display: flex;
+  gap: 10px;
 }
+
+.search-bar input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: #ccc;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+}
+
+.movie-poster {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* Movie Details Page Scoped CSS */
+.movie-details-page .movie-details {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+  max-width: 1000px;
+}
+
+.movie-details-page .movie-poster {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
